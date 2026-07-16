@@ -208,8 +208,8 @@ const MODULES = [
 
 function moduleBg(index, total) {
   const t = index / (total - 1);
-  const from = [255, 255, 255];
-  const to = [255, 198, 48];
+  const from = [255, 198, 48];
+  const to = [255, 255, 255];
   const mix = (a, b) => Math.round(a + (b - a) * t);
   const [r, g, b] = [mix(from[0], to[0]), mix(from[1], to[1]), mix(from[2], to[2])];
   return `rgb(${r}, ${g}, ${b})`;
