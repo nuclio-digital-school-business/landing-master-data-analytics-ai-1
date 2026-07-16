@@ -33,6 +33,22 @@ const TEAM = [
   },
 ];
 
+const TEACHER_LOGOS = [
+  { src: '/images/carrusel-profes/latency@4x.png', alt: 'Latency' },
+  { src: '/images/carrusel-profes/mostlay.ai@4x.png', alt: 'MOSTLY AI' },
+  { src: '/images/carrusel-profes/qogita@4x.png', alt: 'Qogita' },
+  { src: '/images/carrusel-profes/keepler@4x.png', alt: 'Kepler Data Tech' },
+  { src: '/images/carrusel-profes/kantar@4x.png', alt: 'Kantar' },
+];
+
+const COMPANY_LOGO = {
+  Latency: '/images/carrusel-profes/latency@4x.png',
+  'MOSTLY AI': '/images/carrusel-profes/mostlay.ai@4x.png',
+  Qogita: '/images/carrusel-profes/qogita@4x.png',
+  'Kepler Data Tech': '/images/carrusel-profes/keepler@4x.png',
+  Kantar: '/images/carrusel-profes/kantar@4x.png',
+};
+
 export default function Docentes() {
   return (
     <section className="sec docentes">
@@ -54,7 +70,9 @@ export default function Docentes() {
           <img className="director-card__ava" src={DIRECTOR.img} alt={DIRECTOR.name} />
           <div>
             <h4>{DIRECTOR.name}</h4>
-            <span className="company-chip">{DIRECTOR.company}</span>
+            <span className="company-chip">
+              <img src={COMPANY_LOGO[DIRECTOR.company]} alt={DIRECTOR.company} />
+            </span>
             <p className="director-card__role">{DIRECTOR.role}</p>
             <p className="director-card__bio">{DIRECTOR.bio}</p>
           </div>
@@ -68,10 +86,20 @@ export default function Docentes() {
               <div>
                 <h4>{t.name}</h4>
                 <span className="team-member__role">{t.role}</span>
-                <span className="company-chip">{t.company}</span>
+                <span className="company-chip">
+                  <img src={COMPANY_LOGO[t.company]} alt={t.company} />
+                </span>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="profes-logo-carousel reveal">
+          <div className="profes-logo-track">
+            {[...TEACHER_LOGOS, ...TEACHER_LOGOS, ...TEACHER_LOGOS].map((logo, i) => (
+              <img key={`${logo.alt}-${i}`} src={logo.src} alt={i < TEACHER_LOGOS.length ? logo.alt : ''} aria-hidden={i >= TEACHER_LOGOS.length} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

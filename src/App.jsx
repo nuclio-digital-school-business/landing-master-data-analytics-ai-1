@@ -6,10 +6,7 @@ import Hero from './components/Hero';
 import Docentes from './components/Docentes';
 import Stats from './components/Stats';
 import Why from './components/Why';
-import Mercado from './components/Mercado';
 import Boost from './components/Boost';
-import Empleo from './components/Empleo';
-import Trust from './components/Trust';
 import Testimonios from './components/Testimonios';
 import Signup from './components/Signup';
 import Footer from './components/Footer';
@@ -26,10 +23,7 @@ export default function App() {
       <Docentes />
       <Stats />
       <Why />
-      <Mercado />
       <Boost />
-      <Empleo />
-      <Trust />
       <Testimonios />
       <Signup />
       <Footer />

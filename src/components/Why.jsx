@@ -1,6 +1,23 @@
 import { useState } from 'react';
 import { useFormModal } from '../context/FormModalContext';
 
+const SALIDAS = ['Data Analyst', 'BI Analyst', 'BI Engineer', 'Data Consultant', 'Marketing Analyst', 'Business Analyst'];
+
+const LOGOS = [
+  '2c0a5736b5858bc933a15b274085512866df939d.png',
+  '5cbf60d0fdf2b6d977b277d893520443540023cf.png',
+  '6bbf47163703935628349109410892bb2b4b5010.png',
+  '21d40fdc312dc43e4be75ec73a3c011c1dabbc3f.png',
+  '41174b4e46ab978f4c980a472a6387b635e99a73.png',
+  '6603312b366ab4d864d5577228581ce1de82c7a8.png',
+  '7417071fb377e45dadde15a42876a432a079e737.png',
+  '519083127e426c66ef97623364ba5b96d8f7662f.png',
+  'c2a5e01ee63777eb18b58897d4151162ec8fa02d.png',
+  'c3043b5df95b657b0684742b034ebd047c158bdc.png',
+  'c9436c0d5f800c99954e5df165c0ff7df432fe12.png',
+  'e9e110d442dd686b7e2a60c8b243803a94a1f71d.png',
+].map((file, i) => ({ src: `/images/carrusel nuestros alumnos/${file}`, alt: `Empresa ${i + 1}` }));
+
 const REASONS = [
   {
     title: 'Se empieza desde cero, con foco en negocio',
@@ -221,6 +238,12 @@ export default function Why() {
 
   return (
     <section className="sec why">
+      <img
+        src="/images/decoracion nuclio.png"
+        alt=""
+        className="why-deco why-deco--br"
+        aria-hidden="true"
+      />
       <div className="wrap">
         <h2 className="reveal">Pensado para gente de negocio, no para ingenieros.</h2>
         <p className="subt reveal">
@@ -278,6 +301,90 @@ export default function Why() {
             <button type="button" className="btn btn-yellow" onClick={() => openModal('download')}>
               Descargar plan de estudios
             </button>
+          </div>
+        </div>
+
+        <div className="empleo-title-wrap" style={{ marginTop: 56 }}>
+          <img
+            src="/images/decoracion nuclio.png"
+            alt=""
+            className="why-deco why-deco--tl"
+            aria-hidden="true"
+          />
+          <h2 className="reveal empleo-title">
+            ¡Esto no termina aquí!
+            <br />
+            Seguimos contigo.
+          </h2>
+          <p className="subt reveal">
+            Te orientamos y ayudamos con tu <strong>CV</strong> y <strong>portfolio</strong> para
+            LinkedIn, pudiendo <strong>conectar con empresas</strong> del sector en el{' '}
+            <strong>Hiring Day</strong> anual.
+          </p>
+
+          <div className="hiring-card reveal">
+            <div className="hiring-card__body">
+              <span className="hiring-card__label">Career &amp; Talent</span>
+              <h3>Hiring Day</h3>
+              <p>
+                Realizamos un evento anual exclusivo donde los alumnos tienen la oportunidad de
+                conocer empresas reales.
+              </p>
+              <p>
+                Se realizan entrevistas <strong>speed dating</strong> para estrechar lazos y
+                ofrecer vacantes activas. Participan marcas reconocidas como Desigual, CaixaBank,
+                NTT Data, Jellyfish…
+              </p>
+            </div>
+            <img
+              className="hiring-card__img"
+              alt=""
+              src="https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg?auto=compress&cs=tinysrgb&w=900"
+            />
+          </div>
+
+          <div className="mercado-block reveal" style={{ marginTop: 56 }}>
+            <h2 className="mercado-title">Te formamos para el mercado, no para el aula.</h2>
+            <p className="subt">
+              Aprenderás con <strong>datos reales</strong>, tomarás decisiones que importan y
+              llegarás a un <strong>mercado que ya te está buscando</strong>.
+            </p>
+            <div className="salidas-chips reveal-stagger">
+              {SALIDAS.map((s) => (
+                <span className="chip" key={s}>{s}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="alumni-block reveal" style={{ marginTop: 56 }}>
+            <img
+              src="/images/decoracion nuclio.png"
+              alt=""
+              className="why-deco why-deco--alumni"
+              aria-hidden="true"
+            />
+            <h2 className="alumni-title">¿Dónde trabajan nuestros alumnos?</h2>
+            <div className="logo-row reveal-stagger">
+              {LOGOS.map((logo, i) => {
+                const extraStyle = {};
+                if (i === 9) extraStyle.transform = 'scaleX(-1)'; // Desigual
+                if (i === 2 || i === 5) extraStyle.height = '46px'; // Wallapop, SEAT
+                return (
+                  <img
+                    key={logo.alt}
+                    alt={logo.alt}
+                    src={logo.src}
+                    style={Object.keys(extraStyle).length ? extraStyle : undefined}
+                  />
+                );
+              })}
+            </div>
+            <img
+              src="/images/decoracion nuclio.png"
+              alt=""
+              className="why-deco why-deco--alumni-bottom"
+              aria-hidden="true"
+            />
           </div>
         </div>
       </div>
