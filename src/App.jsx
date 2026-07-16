@@ -7,7 +7,6 @@ import Docentes from './components/Docentes';
 import Stats from './components/Stats';
 import Why from './components/Why';
 import Mercado from './components/Mercado';
-import Temario from './components/Temario';
 import Boost from './components/Boost';
 import Empleo from './components/Empleo';
 import Trust from './components/Trust';
@@ -28,7 +27,6 @@ export default function App() {
       <Stats />
       <Why />
       <Mercado />
-      <Temario />
       <Boost />
       <Empleo />
       <Trust />

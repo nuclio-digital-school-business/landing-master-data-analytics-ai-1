@@ -5,59 +5,189 @@ const MODULES = [
   {
     n: 'Pre',
     title: 'Data Pre-Work',
-    body: 'Nivelación previa en Python, SQL y estadística aplicada para que todos arranquen con la misma base, vengas de donde vengas.',
+    body: (
+      <>
+        <p>
+          Antes de comenzar el bootcamp tendrás acceso a varios pre-cursos online para
+          prepararte y empezar con una base sólida.
+        </p>
+        <p>
+          Repasarás desde cero los fundamentos de programación con <strong>Python y SQL</strong>,
+          así como conceptos clave de <strong>estadística aplicada al análisis de datos</strong>.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M1',
     title: 'Introducción a Data Analytics y la revolución de los datos',
-    body: 'Familiarízate con el rol del Data Analyst y el impacto de los datos en la toma de decisiones de negocio.',
+    body: (
+      <>
+        <p>
+          Descubre el papel de los datos en las empresas y cómo el análisis de datos impulsa la
+          toma de decisiones estratégicas.
+        </p>
+        <p>
+          Explorarás la evolución del <strong>Data Analytics</strong>, los conceptos clave del
+          sector, la ética y privacidad en el uso de datos y una introducción a{' '}
+          <strong>bases de datos, Big Data y Machine Learning</strong>.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M2',
     title: 'Python 101',
-    body: 'Fundamentos de programación en Python orientados al análisis de datos: estructuras, librerías clave y buenas prácticas.',
+    body: (
+      <>
+        <p>
+          Aprende los fundamentos de programación en Python y cómo utilizar este lenguaje para
+          trabajar con datos.
+        </p>
+        <p>
+          Trabajarás variables, estructuras de control, funciones y manejo de archivos, además de
+          librerías esenciales como <strong>NumPy y Pandas</strong> para el análisis y
+          tratamiento de datos.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M3',
     title: 'Statistical Thinking',
-    body: 'Estadística aplicada para interpretar datos con criterio: distribuciones, hipótesis y significancia.',
+    body: (
+      <>
+        <p>
+          Desarrolla una base sólida en estadística para interpretar datos con criterio y
+          comunicar resultados de forma efectiva.
+        </p>
+        <p>
+          Aprenderás <strong>estadística descriptiva, probabilidad, correlación y
+          significancia</strong>, además de crear visualizaciones con <strong>Matplotlib</strong>{' '}
+          para explorar datos.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M4',
     title: 'Análisis exploratorio de datos',
-    body: 'Técnicas de EDA para limpiar, transformar y entender un dataset antes de modelarlo o visualizarlo.',
+    body: (
+      <>
+        <p>
+          Aprende a limpiar, transformar y analizar datos procedentes de diferentes fuentes para
+          extraer información relevante.
+        </p>
+        <p>
+          Trabajarás técnicas de <strong>data cleaning, transformación de datos y análisis
+          exploratorio</strong>, pasando del análisis a la toma de decisiones.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M5',
     title: 'SQL para Data Analysts',
-    body: 'Consultas SQL para extraer, combinar y analizar datos directamente desde bases de datos relacionales.',
+    body: (
+      <>
+        <p>
+          Domina SQL para consultar, filtrar y manipular datos en bases de datos de forma
+          eficiente.
+        </p>
+        <p>
+          Aprenderás a trabajar con <strong>queries, funciones de agregación, filtros y
+          ordenación</strong>, además de introducirte en{' '}
+          <strong>BigQuery, bases de datos NoSQL y MongoDB</strong>.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M6',
     title: 'Dataviz: herramientas y dashboards',
-    body: 'Construcción de dashboards con Tableau y Looker Studio para comunicar insights a negocio.',
+    body: (
+      <>
+        <p>Aprende a comunicar datos de forma clara mediante visualización y storytelling.</p>
+        <p>
+          Diseñarás <strong>dashboards y reports</strong> con herramientas como{' '}
+          <strong>Looker Studio</strong>, trabajarás <strong>KPIs</strong> y descubrirás buenas
+          prácticas de visualización de datos.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M7',
     title: 'ChatGPT y LLMs en análisis de datos',
-    body: 'Aplica IA generativa para acelerar la exploración, limpieza y documentación de tus análisis.',
+    body: (
+      <>
+        <p>Descubre cómo los modelos de lenguaje pueden acelerar el trabajo de análisis de datos.</p>
+        <p>
+          Explorarás <strong>prompt engineering</strong>, herramientas basadas en{' '}
+          <strong>LLMs</strong> y cómo aplicar estas tecnologías para analizar datos de forma más
+          rápida y eficiente.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M8',
     title: 'Introducción a Machine Learning & IA',
-    body: 'Primeros modelos predictivos: regresión, clasificación y clustering aplicados a casos de negocio.',
+    body: (
+      <>
+        <p>
+          Conoce los fundamentos del Machine Learning y cómo se aplican los modelos predictivos
+          en el análisis de datos.
+        </p>
+        <p>
+          Aprenderás los principales <strong>algoritmos, técnicas y herramientas</strong>, además
+          de evaluar modelos y entender sus sesgos y aplicaciones.
+        </p>
+      </>
+    ),
   },
   {
     n: 'M9',
     title: 'Desafíos y tendencias en el mercado de datos',
-    body: 'Panorama actual del sector: gobernanza del dato, ética en IA y hacia dónde evoluciona el rol.',
+    body: (
+      <>
+        <p>
+          Explora las principales tendencias del sector y cómo posicionarte profesionalmente en
+          el mercado de datos.
+        </p>
+        <p>
+          Aprenderás a crear tu <strong>portfolio en GitHub</strong>, conocerás aspectos legales y
+          éticos del uso de datos y descubrirás las diferentes salidas profesionales en{' '}
+          <strong>Data Analytics</strong>.
+        </p>
+      </>
+    ),
   },
   {
-    n: 'TFM',
-    title: 'Proyecto final mentorizado',
-    body: 'Aplicas todo el ciclo analítico sobre un caso real, con un tutor experto, y lo defiendes ante tribunal.',
+    n: 'PF',
+    title: 'Proyecto Final',
+    body: (
+      <>
+        <p>Pon en práctica todo lo aprendido desarrollando un proyecto real de análisis de datos.</p>
+        <p>
+          Trabajarás en equipo para analizar una problemática real, aplicar pensamiento
+          estadístico, trabajar con bases de datos y comunicar insights mediante{' '}
+          <strong>data storytelling</strong>, con el acompañamiento de profesionales del sector.
+        </p>
+      </>
+    ),
   },
 ];
+
+// Degradado de amarillo a blanco a lo largo de toda la lista de módulos
+function moduleBg(index, total) {
+  const t = index / (total - 1);
+  const from = [255, 198, 48];
+  const to = [255, 255, 255];
+  const mix = (a, b) => Math.round(a + (b - a) * t);
+  const [r, g, b] = [mix(from[0], to[0]), mix(from[1], to[1]), mix(from[2], to[2])];
+  return `rgb(${r}, ${g}, ${b})`;
+}
 
 export default function Temario() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -73,24 +203,28 @@ export default function Temario() {
           real.
         </p>
 
-        <div className="nuclio-accordion reveal">
+        <div className="temario-pills reveal">
           {MODULES.map((mod, i) => {
             const isOpen = openIndex === i;
             return (
-              <div className="nuclio-accordion__item" key={mod.n}>
+              <div
+                className={`temario-pill${isOpen ? ' is-open' : ''}`}
+                key={mod.n}
+                style={{ background: moduleBg(i, MODULES.length) }}
+              >
                 <button
                   type="button"
-                  className="nuclio-accordion__trigger"
+                  className="temario-pill__trigger"
                   aria-expanded={isOpen}
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                 >
-                  <span className="nuclio-accordion__num">{mod.n}</span>
-                  <span className="nuclio-accordion__title">{mod.title}</span>
+                  <span className="temario-pill__num">{mod.n}</span>
+                  <span className="temario-pill__title">{mod.title}</span>
                   <span className="nuclio-accordion__icon" aria-hidden="true" />
                 </button>
                 <div className={`nuclio-accordion__content${isOpen ? ' is-open' : ''}`}>
-                  <div className="nuclio-accordion__content-inner">
-                    <p>{mod.body}</p>
+                  <div className="nuclio-accordion__content-inner temario-pill__inner">
+                    {mod.body}
                   </div>
                 </div>
               </div>
@@ -100,7 +234,7 @@ export default function Temario() {
 
         <div className="temario-cta">
           <button type="button" className="btn btn-yellow" onClick={() => openModal('download')}>
-            Descarga el plan de estudio
+            Descargar plan de estudios
           </button>
         </div>
       </div>

@@ -1,8 +1,8 @@
 const STATS = [
-  { num: '25', lbl: 'Semanas part-time' },
-  { num: '+6', lbl: 'Proyectos prácticos' },
-  { num: '7', lbl: 'Piezas de portfolio' },
-  { num: '+50', lbl: 'Ediciones de máster' },
+  { num: '22', lbl: 'Semanas part-time', note: '*Compatible con tu trabajo.' },
+  { num: '+6', lbl: 'Proyectos prácticos', note: '*Con expertos en activo.' },
+  { num: '7', lbl: 'Piezas de portfolio', note: '*Al terminar de cursar el máster.' },
+  { num: '+50', lbl: 'Ediciones de máster', note: '*Desde 2020.' },
 ];
 
 export default function Stats() {
@@ -32,8 +32,13 @@ export default function Stats() {
         <div className="stats-grid reveal-stagger">
           {STATS.map((s) => (
             <div className="stat-card" key={s.lbl}>
-              <div className="num">{s.num}</div>
-              <div className="lbl">{s.lbl}</div>
+              <div className="stat-card__top">
+                <div className="num">{s.num}</div>
+                <div className="stat-card__col">
+                  <div className="lbl">{s.lbl}</div>
+                  <div className="note">{s.note}</div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

@@ -7,8 +7,8 @@ export default function Mercado() {
         <div className="eyebrow on-dark reveal">Salidas profesionales</div>
         <h2 className="reveal">Te formamos para el mercado, no para el aula.</h2>
         <p className="subt reveal">
-          Trabajamos con el stack que aparece en las ofertas reales: Python, SQL, Tableau,
-          Looker Studio y MongoDB. Estas son las posiciones a las que puedes optar al terminar:
+          Aprenderás con <strong>datos reales</strong>, tomarás decisiones que importan y
+          llegarás a un <strong>mercado que ya te está buscando</strong>.
         </p>
         <div className="salidas-chips reveal-stagger">
           {SALIDAS.map((s) => (
