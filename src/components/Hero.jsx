@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="hero-bottom load-in load-in-5">
           <div className="hero-fundae-row">
             <p className="hero-fundae">Bonificable Fundae</p>
-            <img src="/images/fundae-logo.png" alt="FUNDAE" className="fundae-logo" />
+            <img src="/images/fundae.png" alt="FUNDAE" className="fundae-logo" />
           </div>
           <p className="hero-accred">
             Acreditación universitaria de EUNEIZ (30 ECTS) disponible bajo solicitud expresa.
