@@ -6,6 +6,8 @@ import Hero from './components/Hero';
 import Docentes from './components/Docentes';
 import Stats from './components/Stats';
 import Why from './components/Why';
+import EmpleoVideo from './components/EmpleoVideo';
+import MercadoAlumni from './components/MercadoAlumni';
 import Testimonios from './components/Testimonios';
 import Signup from './components/Signup';
 import Footer from './components/Footer';
@@ -22,6 +24,8 @@ export default function App() {
       <Docentes />
       <Stats />
       <Why />
+      <EmpleoVideo />
+      <MercadoAlumni />
       <Testimonios />
       <Signup />
       <Footer />
