@@ -3,10 +3,21 @@ import ContactFormCard from './ContactFormCard';
 export default function Signup() {
   return (
     <section className="sec signup" id="solicita">
+      <img
+        src="/images/decoracion-nuclio-logo.png"
+        alt=""
+        className="signup-deco"
+        aria-hidden="true"
+      />
       <div className="wrap">
-        <h2 className="reveal">Déjanos ayudarte a conseguir tu objetivo.</h2>
-        <p className="subt reveal">
-          Rellena tus datos y un asesor te contactará para acompañarte en los próximos pasos.
+        <h2 className="reveal signup-title">
+          Déjanos ayudarte
+          <br />
+          <strong>a conseguir tu sueño.</strong>
+        </h2>
+        <p className="subt reveal signup-subt">
+          Rellena la información y un asesor contactará contigo para concretar los próximos
+          pasos a seguir.
         </p>
         <div className="signup-form-wrap reveal">
           <ContactFormCard

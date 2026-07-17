@@ -3,7 +3,7 @@ export default function Footer() {
     <div className="foot">
       <div className="wrap">
         <div className="logo">
-          <img src="/images/logo-white.svg" alt="Nuclio Digital School" className="logo-img" />
+          <img src="/images/logo-nuclio.png" alt="Nuclio Digital School" className="logo-img" />
         </div>
         <p>Máster en Data Analytics · Online &amp; presencial · Barcelona &amp; Madrid.</p>
         <p>Formación bonificable a través de FUNDAE. Plazas limitadas por edición.</p>

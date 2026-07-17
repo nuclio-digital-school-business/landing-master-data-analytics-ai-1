@@ -13,7 +13,9 @@ export default function RailForm() {
 
     const onScroll = () => {
       const heroBottom = hero.getBoundingClientRect().bottom;
-      setVisible(heroBottom <= 0);
+      const signup = document.getElementById('solicita');
+      const reachedSignup = signup ? signup.getBoundingClientRect().top <= window.innerHeight : false;
+      setVisible(heroBottom <= 0 && !reachedSignup);
     };
 
     onScroll();

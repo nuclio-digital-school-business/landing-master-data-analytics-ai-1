@@ -239,7 +239,7 @@ export default function Why() {
   return (
     <section className="sec why">
       <img
-        src="/images/decoracion nuclio.png"
+        src="/images/decoracion-nuclio-oscuro.png"
         alt=""
         className="why-deco why-deco--br"
         aria-hidden="true"
@@ -306,7 +306,7 @@ export default function Why() {
 
         <div className="empleo-title-wrap" style={{ marginTop: 56 }}>
           <img
-            src="/images/decoracion nuclio.png"
+            src="/images/decoracion-nuclio-oscuro.png"
             alt=""
             className="why-deco why-deco--tl"
             aria-hidden="true"
