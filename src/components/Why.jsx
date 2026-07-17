@@ -189,7 +189,7 @@ function moduleBg(index, total) {
 }
 
 export default function Why() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
   const { openModal } = useFormModal();
 
   return (
