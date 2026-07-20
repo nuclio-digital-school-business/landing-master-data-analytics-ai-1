@@ -313,6 +313,7 @@ a{color:inherit;}
   box-shadow:0 8px 30px rgba(255,255,255,.1);
 }
 @media(max-width:640px){
+  .sec{padding:40px 0;}
   .why-modalidades{
     background:var(--ink);
     border-radius:24px;
@@ -584,7 +585,11 @@ a{color:inherit;}
 
 /* Formulario sticky (desktop) — no afecta al ancho de las secciones */
 .sticky-form-scope{position:relative;}
-.rail-form{display:block;margin:24px auto 0;max-width:var(--wrap);padding:0 24px;}
+.rail-form{display:none;}
+.hero-mobile-form{display:block;margin-top:32px;}
+@media(min-width:1000px){
+  .hero-mobile-form{display:none;}
+}
 @media(max-width:999px){
   .stats-sec{padding-top:180px;}
 }
@@ -675,5 +680,48 @@ a{color:inherit;}
   .signup-title{
     font-size:24px;
     line-height:29px;
+  }
+}
+
+/* Ajustes adicionales de espaciado para móvil */
+@media(max-width:640px){
+  .stats-sec{
+    padding-top:100px;
+    padding-bottom:90px;
+  }
+  .temario-pill__trigger{
+    padding:12px;
+    gap:12px;
+  }
+  .mercado-alumni-wrap{
+    position:relative;
+    z-index:3;
+    background:var(--yellow);
+    padding-top:60px;
+    padding-bottom:90px;
+    border-radius:40px;
+    margin-top:-40px;
+    margin-bottom:-40px;
+  }
+  .logo-row{
+    display:flex;
+    gap:24px;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:32px;
+  }
+  .sec.testimonios{
+    padding:60px 0;
+  }
+  .empleo-video-sec{
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    padding:80px 0;
+    z-index:2;
+    margin-top:-40px;
+    margin-bottom:-40px;
+    transform:translateZ(0);
   }
 }

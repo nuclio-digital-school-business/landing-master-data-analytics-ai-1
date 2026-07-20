@@ -1,4 +1,5 @@
 import { useFormModal } from '../context/FormModalContext';
+import ContactFormCard from './ContactFormCard';
 
 export default function Hero() {
   const { openModal } = useFormModal();
@@ -40,6 +41,10 @@ export default function Hero() {
           <p className="hero-accred">
             Acreditación universitaria de EUNEIZ (30 ECTS) disponible bajo solicitud expresa.
           </p>
+        </div>
+
+        <div className="hero-mobile-form load-in load-in-5">
+          <ContactFormCard targetId="hs-form-hero-mobile" />
         </div>
       </div>
     </section>
