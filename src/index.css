@@ -409,10 +409,9 @@ a{color:inherit;}
   border:1px solid var(--ink);border-radius:20px;overflow:hidden;margin-top:28px;padding:26px 26px 0;
 }
 .hiring-card--glass{
-  background:rgba(20,20,20,.55);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,.25);
+  background:#1414148c;
+  backdrop-filter:blur(18px);
+  border:1px solid #ffffff40;
 }
 .hiring-card.hiring-card--glass .hiring-card__label{color:rgb(255 255 255);}
 .hiring-card.hiring-card--glass h3{color:#fff;}
