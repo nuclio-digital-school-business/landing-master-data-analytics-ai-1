@@ -209,7 +209,7 @@ export default function Why() {
           <h2 className="reveal">Pensado para gente de negocio, no para ingenieros.</h2>
           <p className="subt reveal">
             Sin código previo, sin jerga innecesaria: <strong>aprenderás a pensar como analista</strong>{' '}
-            y a convertir datos en decisiones que un negocio pueda usar de verdad.
+            convirtiendo datos en decisiones que un negocio pueda usar de verdad.
           </p>
 
           <div className="why-modalidades reveal" style={{ marginTop: 56 }}>

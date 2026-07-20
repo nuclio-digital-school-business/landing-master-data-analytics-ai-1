@@ -10,20 +10,24 @@ export default function Signup() {
         aria-hidden="true"
       />
       <div className="wrap">
-        <h2 className="reveal signup-title">
-          Déjanos ayudarte
-          <br />
-          <strong>a conseguir tu sueño.</strong>
-        </h2>
-        <p className="subt reveal signup-subt">
-          Rellena la información y un asesor contactará contigo para concretar los próximos
-          pasos a seguir.
-        </p>
-        <div className="signup-form-wrap reveal">
-          <ContactFormCard
-            targetId="hs-form-signup"
-            subtitle="Al enviar aceptas la política de privacidad de Nuclio Digital School."
-          />
+        <div className="signup-grid">
+          <div className="signup-copy">
+            <h2 className="reveal signup-title">
+              Déjanos ayudarte
+              <br />
+              <strong>a conseguir tu sueño.</strong>
+            </h2>
+            <p className="subt reveal signup-subt">
+              Rellena la información y un asesor contactará contigo para concretar los próximos
+              pasos a seguir.
+            </p>
+          </div>
+          <div className="signup-form-wrap reveal">
+            <ContactFormCard
+              targetId="hs-form-signup"
+              subtitle="Al enviar aceptas la política de privacidad de Nuclio Digital School."
+            />
+          </div>
         </div>
       </div>
     </section>

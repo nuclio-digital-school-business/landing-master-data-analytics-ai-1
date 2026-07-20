@@ -422,7 +422,7 @@ a{color:inherit;}
   font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
   color:#fff;
 }
-.hiring-card__companies{display:flex;flex-wrap:wrap;gap:24px;align-items:center;padding-bottom:22px;}
+.hiring-card__companies{display:flex;flex-wrap:wrap;gap:24px;align-items:center;padding-bottom:0;}
 .company-logo{height:20px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.95;}
 .company-logo--ntt{height:28px;}
 .company-logo--rotate{transform:scaleX(-1);}
@@ -539,29 +539,31 @@ a{color:inherit;}
 .testi-item__name{display:block;margin-top:8px;font-size:13.5px;font-weight:700;color:var(--yellow);}
 
 /* Signup */
-.signup{background:#fff;color:var(--ink);text-align:center;position:relative;overflow:hidden;border-radius:40px 40px 0 0;z-index:3;margin-top:-40px;}
+.signup{background:#fff;color:var(--ink);text-align:left;position:relative;overflow:hidden;border-radius:40px 40px 0 0;z-index:3;margin-top:-40px;}
 .signup > .wrap{position:relative;z-index:1;}
 .signup-deco{position:absolute;bottom:-10px;right:-10px;z-index:0;pointer-events:none;min-width:520px;height:auto;opacity:1;transform:rotate(90deg);}
+.signup-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;}
+.signup-copy{text-align:left;}
 .signup-title{
   color:#171717;
   font-family:'Manrope',-apple-system,Arial,sans-serif;
-  font-size:40px;
+  font-size:56px !important;
   font-style:normal;
   font-weight:600;
-  line-height:44px;
-  max-width:600px;margin:0 auto;
+  line-height:1.05;
+  max-width:none;margin:0;
 }
 .signup-title strong{font-weight:700;}
 .signup-subt{
   color:#171717;
   font-family:'Manrope',-apple-system,Arial,sans-serif;
-  font-size:16px;
+  font-size:18px;
   font-style:normal;
   font-weight:500;
   line-height:21px;
-  max-width:520px;margin:14px auto 0;text-align:center;
+  max-width:440px;margin:20px 0 0;text-align:left;
 }
-.signup-form-wrap{max-width:480px;margin:36px auto 0;text-align:center;}
+.signup-form-wrap{max-width:480px;margin:0;text-align:left;}
 .signup-form-wrap .form-card{
   text-align:left;
   background:rgba(255,255,255,.55);
@@ -569,6 +571,14 @@ a{color:inherit;}
   -webkit-backdrop-filter:blur(18px);
   border:1px solid var(--ink);
   box-shadow:0 8px 32px rgba(0,0,0,.08);
+}
+@media(max-width:900px){
+  .signup-grid{grid-template-columns:1fr;gap:32px;}
+  .signup{text-align:center;}
+  .signup-copy,.signup-subt,.signup-title{text-align:center;}
+  .signup-title{font-size:36px;}
+  .signup-subt{margin:14px auto 0;}
+  .signup-form-wrap{margin:0 auto;}
 }
 
 /* Footer */
@@ -742,5 +752,98 @@ a{color:inherit;}
     gap:10px;
     margin-top:64px;
     display:flex;
+  }
+}
+
+/* Ajustes exclusivos de escritorio */
+@media(min-width:1000px){
+  .hero-inner{
+    text-align:left;
+    align-self:center;
+    max-width:93%;
+    margin:0;
+  }
+  .hero .lead{
+    color:#fffc;
+    max-width:86%;
+    margin:20px 0 0;
+    font-size:16.5px;
+    line-height:1.55;
+  }
+  .hero-fundae-row{justify-content:flex-start;}
+  .hero-accred{
+    color:#ffffffa6;
+    margin-top:8px;
+    font-family:'Manrope',-apple-system,Arial,sans-serif;
+    font-size:13px;
+    text-align:left;
+  }
+  .docentes h2,
+  .docentes .subt{
+    max-width:500px;
+  }
+  .company-chip--latency{
+    background:var(--yellow);
+    color:var(--ink);
+    border-radius:9999px;
+    align-items:center;
+    gap:6px;
+    padding:6px 16px 4px;
+  }
+  .stats-sec h2{
+    color:#fff;
+    max-width:580px;
+    font-family:'Manrope',-apple-system,Arial,sans-serif;
+    font-size:36px;
+    font-style:normal;
+    font-weight:600;
+    line-height:38px;
+  }
+}
+
+/* Más ajustes exclusivos de escritorio */
+@media(min-width:1000px){
+  .why h2{
+    color:#fff;
+    max-width:600px;
+    font-family:'Manrope',-apple-system,Arial,sans-serif;
+    font-size:40px;
+    font-style:normal;
+    font-weight:600;
+    line-height:44px;
+  }
+  .why .subt{
+    max-width:650px;
+    margin-top:14px;
+    font-family:'Manrope',-apple-system,Arial,sans-serif;
+    font-size:15.5px;
+    font-style:normal;
+    font-weight:500;
+    line-height:21px;
+  }
+  .empleo-video-sec .wrap{
+    padding-right:420px;
+  }
+  .hiring-card__companies{
+    flex-wrap:wrap;
+    align-items:center;
+    gap:24px;
+    display:flex;
+  }
+  .hiring-card__companies-label{
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:#fff;
+    margin-top:32px;
+    margin-bottom:10px;
+    font-size:12px;
+    font-weight:700;
+    display:block;
+  }
+  .mercado-alumni-wrap .salidas-chips .chip{
+    color:#171717;
+    background:#ffc630;
+    backdrop-filter:blur(18px);
+    border:1px solid #171717;
   }
 }
