@@ -34,11 +34,11 @@ const TEAM = [
 ];
 
 const TEACHER_LOGOS = [
-  { src: '/images/carrusel-profes/latency@4x.png', alt: 'Latency' },
-  { src: '/images/carrusel-profes/mostlay.ai@4x.png', alt: 'MOSTLY AI' },
-  { src: '/images/carrusel-profes/qogita@4x.png', alt: 'Qogita' },
-  { src: '/images/carrusel-profes/keepler@4x.png', alt: 'Kepler Data Tech' },
-  { src: '/images/carrusel-profes/kantar@4x.png', alt: 'Kantar' },
+  { src: '/images/carrusel-color/latency.png', alt: 'Latency' },
+  { src: '/images/carrusel-color/mostly.png', alt: 'MOSTLY AI' },
+  { src: '/images/carrusel-color/qogita.png', alt: 'Qogita' },
+  { src: '/images/carrusel-color/keepler.png', alt: 'Kepler Data Tech' },
+  { src: '/images/carrusel-color/kantar.png', alt: 'Kantar' },
 ];
 
 const COMPANY_LOGO = {

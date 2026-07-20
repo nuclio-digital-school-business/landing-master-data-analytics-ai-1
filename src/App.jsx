@@ -19,13 +19,15 @@ export default function App() {
   return (
     <FormModalProvider>
       <Header />
-      <RailForm />
-      <Hero />
-      <Docentes />
-      <Stats />
-      <Why />
-      <EmpleoVideo />
-      <MercadoAlumni />
+      <div className="sticky-form-scope">
+        <RailForm />
+        <Hero />
+        <Docentes />
+        <Stats />
+        <Why />
+        <EmpleoVideo />
+        <MercadoAlumni />
+      </div>
       <Testimonios />
       <Signup />
       <Footer />

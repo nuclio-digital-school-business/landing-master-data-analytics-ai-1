@@ -4,13 +4,13 @@ export default function Hero() {
   const { openModal } = useFormModal();
 
   return (
-    <section className="hero" id="top">
+    <section className="hero sec" id="top">
       <div className="testi-bg-carousel hero-bg-carousel" aria-hidden="true">
-        <img className="testi-bg-photo" alt="" src="/images/43cf6017705a13b70131400fd07a3d608a5b2e73.jpg" />
         <img className="testi-bg-photo" alt="" src="/images/942f21bb89422ca0596291577fca85909068670c.jpg" />
         <img className="testi-bg-photo" alt="" src="/images/a196044a80f19550f42b089d84d01c5a5704d4a5.jpg" />
+        <img className="testi-bg-photo" alt="" src="/images/hiring-day/WelcomeWeek-254.jpg" />
       </div>
-      <div className="wrap hero-flex">
+      <div className="wrap">
         <div className="hero-inner">
           <span className="kicker load-in load-in-1">Máster en Data Analytics</span>
           <h1 className="load-in load-in-2">

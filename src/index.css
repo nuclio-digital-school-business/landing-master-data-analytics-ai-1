@@ -47,8 +47,8 @@ a{color:inherit;}
 
 /* Hero */
 .hero{
-  position:relative;padding:110px 0 40px;overflow:hidden;color:#fff;
-  min-height:100vh;display:flex;transform:translateZ(0);
+  position:relative;overflow:hidden;color:#fff;
+  transform:translateZ(0);
   background:#141414;
 }
 .hero::before{
@@ -56,16 +56,27 @@ a{color:inherit;}
   background:linear-gradient(180deg, rgba(20,20,20,.55) 0%, rgba(20,20,20,.22) 40%, rgba(20,20,20,.92) 82%, #141414 100%);
 }
 .hero-bg-carousel{display:block !important;position:absolute;inset:0;z-index:0;}
+.hero-bg-carousel .testi-bg-photo{animation:heroBgCycle 9s infinite;}
+.hero-bg-carousel .testi-bg-photo:nth-child(1){animation-delay:0s;}
+.hero-bg-carousel .testi-bg-photo:nth-child(2){animation-delay:3s;}
+.hero-bg-carousel .testi-bg-photo:nth-child(3){animation-delay:6s;}
+@keyframes heroBgCycle{
+  0%{opacity:0;}
+  11.11%{opacity:1;}
+  33.33%{opacity:1;}
+  44.44%{opacity:0;}
+  100%{opacity:0;}
+}
 .hero .wrap{position:relative;z-index:2;width:100%;}
-.hero-flex{display:grid;grid-template-rows:1fr auto;min-height:calc(100vh - 150px);}
-.hero-inner{align-self:center;max-width:760px;margin:0 auto;text-align:center;}
+.hero-inner{align-self:center;max-width:600px;margin:0;text-align:left;}
+.hero-inner .info-row{justify-content:flex-start;}
 .hero .kicker{
   display:block;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
   color:var(--yellow);margin-bottom:20px;
 }
 .hero h1{font-size:clamp(30px,4.6vw,44px);color:#fff;line-height:1.2;letter-spacing:-.02em;}
 .hero h1 .hl{color:var(--yellow);}
-.hero .lead{font-size:16.5px;color:rgba(255,255,255,.8);margin:20px auto 0;max-width:520px;line-height:1.55;}
+.hero .lead{font-size:16.5px;color:rgba(255,255,255,.8);margin:20px 0 0;max-width:520px;line-height:1.55;}
 .hero .btn{margin-top:28px;}
 .info-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;justify-content:center;}
 .info-pill{font-size:13px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#e8e8e8;border-radius:9999px;padding:9px 16px;}
@@ -149,12 +160,13 @@ a{color:inherit;}
   position:relative;overflow:hidden;color:#fff;
   padding:140px 0;
   z-index:2;margin-top:-40px;margin-bottom:-40px;
+  transform:translateZ(0);
 }
 .empleo-photo-bg{
   background:url('https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg?auto=compress&cs=tinysrgb&w=1200');
   background-size:cover;background-position:center;
 }
-.empleo-video-overlay{position:absolute;inset:0;z-index:0;background:rgb(10 10 10 / 44%);}
+.empleo-video-overlay{position:absolute;inset:0;z-index:0;background:rgb(10 10 10 / 25%);}
 .empleo-video-sec > .wrap{position:relative;z-index:1;}
 .empleo-video-sec > .wrap > *:not(img){position:relative;z-index:1;}
 .empleo-video-subt{color:rgb(255 255 255);}
@@ -176,7 +188,7 @@ a{color:inherit;}
   background:var(--yellow);color:var(--ink);
   padding:6px 16px;border-radius:9999px;
 }
-.company-chip img{height:14px;width:auto;object-fit:contain;display:block;}
+.company-chip img{height:18px;width:auto;object-fit:contain;display:block;}
 
 .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 40px;}
 .team-member{display:flex;gap:16px;align-items:flex-start;}
@@ -187,7 +199,7 @@ a{color:inherit;}
 .profes-logo-carousel{position:relative;display:block;margin-top:32px;overflow:hidden;width:100%;max-width:100%;height:20px;contain:layout paint;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
 .profes-logo-track{position:relative;display:flex;align-items:center;gap:36px;width:max-content;height:20px;animation:profesLogoScroll 26s linear infinite;will-change:transform;}
 .profes-logo-track:hover{animation-play-state:paused;}
-.profes-logo-track img{height:20px;width:auto;max-width:none;object-fit:contain;opacity:.55;flex:0 0 auto;}
+.profes-logo-track img{height:20px;width:auto;max-width:none;object-fit:contain;opacity:1;flex:0 0 auto;}
 @media(max-width:600px){
   .profes-logo-track{gap:24px;}
 }
@@ -201,10 +213,9 @@ a{color:inherit;}
 .stats-sec > .wrap{position:relative;z-index:2;}
 .stats-deco{position:absolute;z-index:5;pointer-events:none;min-width:567px;min-height:539.94px;width:auto;height:auto;}
 .stats-deco--tl{top:-60px;left:-60px;}
-.stats-deco--br{bottom:-150px;right:-260px;}
+.stats-deco--br{bottom:60px;right:-260px;}
 @media(max-width:900px){
   .stats-deco{display:none;}
-  .hero{height:100vh;}
 }
 .stats-sec .eyebrow{color:var(--yellow);opacity:1;}
 .stats-sec h2{color:#fff;max-width:620px;font-family:'Manrope',-apple-system,Arial,sans-serif;font-size:36px;font-style:normal;font-weight:600;line-height:38px;}
@@ -273,7 +284,7 @@ a{color:inherit;}
 .mercado-alumni-wrap .mercado-title,
 .mercado-alumni-wrap .alumni-title{color:#171717;}
 .mercado-alumni-wrap .subt{color:var(--ink);}
-.mercado-alumni-wrap .salidas-chips .chip{background:#fff;border:1px solid var(--ink);color:var(--ink);}
+.mercado-alumni-wrap .salidas-chips .chip{background:#171717e6;border:1px solid #ffffff;color:#ffffff;}
 .mercado-alumni-wrap .logo-row img{filter:brightness(0);opacity:1;}
 .why-video-block > .wrap{position:relative;z-index:1;}
 .why-deco{position:absolute;z-index:0;pointer-events:none;min-width:400px;height:auto;opacity:.5;}
@@ -298,6 +309,7 @@ a{color:inherit;}
   background:var(--ink);
   border-radius:24px;
   padding:36px 32px;
+  border:1px solid rgb(255 255 255 / 29%);
   box-shadow:0 8px 30px rgba(255,255,255,.1);
 }
 @media(max-width:640px){
@@ -395,6 +407,31 @@ a{color:inherit;}
   background:#fff;
   border:1px solid var(--ink);border-radius:20px;overflow:hidden;margin-top:28px;padding:26px 26px 0;
 }
+.hiring-card--glass{
+  background:rgba(20,20,20,.55);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.25);
+}
+.hiring-card.hiring-card--glass .hiring-card__label{color:rgb(255 255 255);}
+.hiring-card.hiring-card--glass h3{color:#fff;}
+.hiring-card.hiring-card--glass p{color:rgb(255 255 255);}
+.hiring-card.hiring-card--glass p strong{color:#fff;}
+.hiring-card__companies-label{
+  display:block;margin-top:22px;margin-bottom:10px;
+  font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:#fff;
+}
+.hiring-card__companies{display:flex;flex-wrap:wrap;gap:24px;align-items:center;padding-bottom:22px;}
+.company-logo{height:20px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.95;}
+.company-logo--ntt{height:28px;}
+.company-logo--rotate{transform:scaleX(-1);}
+.company-logo--svg{color:#fff;filter:none;height:20px;width:auto;}
+.company-pill{
+  font-size:16px;font-weight:700;color:#fff;
+  background:none;border:0;
+  padding:0;border-radius:0;
+}
 .hiring-card__label{
   display:block;margin-bottom:8px;
   color:#171717;font-family:'Manrope',-apple-system,Arial,sans-serif;
@@ -442,9 +479,8 @@ a{color:inherit;}
 }
 .logo-row img{height:30px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.85;}
 .alumni-title{
-  color:#fff;
   font-family:'Manrope',-apple-system,Arial,sans-serif;
-  font-size:15px;
+  font-size:20px;
   font-style:normal;
   font-weight:500;
   line-height:19px;
@@ -461,6 +497,7 @@ a{color:inherit;}
   background-attachment:fixed;
 }
 .testi-bg-carousel{display:none;}
+.empleo-bg-carousel{display:block !important;}
 .testi-bg-photo{
   position:fixed;inset:0;width:100%;height:100%;object-fit:cover;
   opacity:0;pointer-events:none;filter:brightness(.35);
@@ -474,6 +511,21 @@ a{color:inherit;}
   3.33%{opacity:1;}
   33.33%{opacity:1;}
   36.67%{opacity:0;}
+  100%{opacity:0;}
+}
+/* Carrusel de 6 fotos (Hiring Day) — mismo patrón, timing recalculado */
+.empleo-bg-carousel .testi-bg-photo{animation:empleoBgCycle 30s infinite;filter:brightness(.75);}
+.empleo-bg-carousel .testi-bg-photo:nth-child(1){animation-delay:0s;}
+.empleo-bg-carousel .testi-bg-photo:nth-child(2){animation-delay:5s;}
+.empleo-bg-carousel .testi-bg-photo:nth-child(3){animation-delay:10s;}
+.empleo-bg-carousel .testi-bg-photo:nth-child(4){animation-delay:15s;}
+.empleo-bg-carousel .testi-bg-photo:nth-child(5){animation-delay:20s;}
+.empleo-bg-carousel .testi-bg-photo:nth-child(6){animation-delay:25s;}
+@keyframes empleoBgCycle{
+  0%{opacity:0;}
+  1.67%{opacity:1;}
+  16.67%{opacity:1;}
+  18.33%{opacity:0;}
   100%{opacity:0;}
 }
 .testimonios > .wrap{position:relative;z-index:1;}
@@ -521,33 +573,42 @@ a{color:inherit;}
 
 /* Footer */
 .foot{background:var(--ink);color:rgba(255,255,255,.55);padding:36px 0;border-top:1px solid var(--line);}
-.foot .wrap{text-align:center;}
-.foot .logo{justify-content:center;margin-bottom:14px;}
+.foot .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;text-align:left;}
+.foot .logo{margin-bottom:0;}
+.foot p{font-size:13px;margin-top:0;}
+@media(max-width:900px){
+  .foot .wrap{flex-direction:column;align-items:flex-start;text-align:left;}
+}
 .foot p{font-size:13px;margin-top:6px;}
 .foot a{text-decoration:underline;}
 
-/* Formulario fijo (desktop) */
-.rail-form{display:none;}
+/* Formulario sticky (desktop) — no afecta al ancho de las secciones */
+.sticky-form-scope{position:relative;}
+.rail-form{display:block;margin:24px auto 0;max-width:var(--wrap);padding:0 24px;}
+@media(max-width:999px){
+  .stats-sec{padding-top:180px;}
+}
 @media (min-width:1000px){
   .stats-sec{padding-top:160px;}
   .wrap{padding-right:384px;}
   .topbar .wrap{padding-right:24px;}
-  .hero .wrap{padding-right:24px;}
-  .hero .form-card{display:none;}
+  .signup .wrap{padding-right:24px;}
+  .foot .wrap{padding-right:24px;}
   .rail-form{
-    display:block;position:fixed;top:86px;right:max(24px, calc(50vw - 590px + 24px));width:344px;z-index:55;
-    opacity:0;transform:translateY(12px);pointer-events:none;
-    transition:opacity .35s ease, transform .35s ease;
+    display:block;position:sticky;top:86px;height:0;overflow:visible;z-index:55;
+    pointer-events:none;margin:0;max-width:none;padding:0;
   }
-  .rail-form.is-visible{opacity:1;transform:translateY(0);pointer-events:auto;}
-  .rail-form .form-card{box-shadow:0 12px 28px rgba(0,0,0,.14);}
-}
-
-@media(max-width:999px){
-  .stats-sec{padding-top:180px;}
+  .rail-form__inner{
+    max-width:var(--wrap);margin:0 auto;padding:0 24px;
+    display:flex;justify-content:flex-end;
+  }
+  .rail-form .form-card{width:344px;pointer-events:auto;box-shadow:0 12px 28px rgba(0,0,0,.14);}
 }
 @media(max-width:900px){
   .empleo-grid,.boost-grid{grid-template-columns:1fr;}
+  .hero-inner{text-align:center;margin:0 auto;max-width:760px;}
+  .hero-inner .info-row{justify-content:center;}
+  .hero .lead{margin:20px auto 0;}
   .stats-grid{grid-template-columns:repeat(2,1fr);}
   .why-grid,.quote-grid{grid-template-columns:1fr;}
   .wrap{padding-right:24px;}
