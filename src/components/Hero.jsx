@@ -23,7 +23,7 @@ export default function Hero() {
             proyectos con datos de empresas reales.
           </p>
           <button type="button" className="btn btn-yellow load-in load-in-3" onClick={() => openModal()}>
-            Habla con un asesor →
+            Habla con un asesor
           </button>
 
           <div className="info-row load-in load-in-4">

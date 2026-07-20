@@ -724,3 +724,23 @@ a{color:inherit;}
     transform:translateZ(0);
   }
 }
+
+/* Hero: ajustes móviles adicionales */
+@media(max-width:640px){
+  .hero .kicker{
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--yellow);
+    margin-bottom:20px;
+    font-size:13px;
+    font-weight:400;
+    display:block;
+  }
+  .hero .lead{display:none;}
+  .info-row{
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:64px;
+    display:flex;
+  }
+}
